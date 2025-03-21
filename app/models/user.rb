@@ -5,6 +5,6 @@ class User < ApplicationRecord
     (?=.{8,}) # at least 8 characters long
   /x
   validates :password, format: PASSWORD_REQUIREMENTS
-end
 
-# reference: https://medium.com/@Timothy_Fell/how-to-set-password-requirements-in-rails-d9081926923b
+  has_many :messages
+end
