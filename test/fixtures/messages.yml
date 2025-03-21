@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+message1:
+  body: the first message
+  user_id:  <%= ActiveRecord::FixtureSet.identify :user1 %>
+
+message2:
+  body: the second message
+  user_id:  <%= ActiveRecord::FixtureSet.identify :user2 %>
+
+message3:
+  body: the third message
+  user_id: <%= ActiveRecord::FixtureSet.identify :user1 %>

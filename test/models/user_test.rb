@@ -22,22 +22,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "username unique" do
-    user = User.new(username: users(:testUser1).username, password: "password")
+    user = User.new(username: users(:user1).username, password: "password")
     assert_not user.valid?
   end
 
   test "password required" do
-    user = User.new(username: users(:testUser1).username, password: "")
+    user = User.new(username: users(:user1).username, password: "")
     assert_not user.valid?
   end
 
   test "password minimum 8 characters" do
-    user = User.new(username: users(:testUser1).username, password: "a" * 7)
+    user = User.new(username: users(:user1).username, password: "a" * 7)
     assert_not user.valid?
   end
 
   test "password maximum 72 characters" do
-    user = User.new(username: users(:testUser1).username, password: "a" * 73)
+    user = User.new(username: users(:user1).username, password: "a" * 73)
     assert_not user.valid?
   end
 end
