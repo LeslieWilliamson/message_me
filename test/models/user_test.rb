@@ -49,14 +49,14 @@ class UserTest < ActiveSupport::TestCase
     user = User.new(username: users(:user1).username, password: "aPassword!")
     assert_not user.valid?
   end
-  
+
   test "password contains one symbol character" do
     user = User.new(username: users(:user1).username, password: "1Password")
     assert_not user.valid?
   end
 
   test "password maximum 72 characters" do
-    user = User.new(username: users(:user1).username, password: "1Pwd" * 19 )
+    user = User.new(username: users(:user1).username, password: "1Pwd" * 19)
     assert_not user.valid?
   end
 end
