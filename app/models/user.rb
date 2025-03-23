@@ -10,7 +10,7 @@ class User < ApplicationRecord
   #   (?=.*[[:^alnum:]])  # contain at least one symbol
   # \z/x
 
-  # PASSWORD_REQUIREMENTS=/(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[[:^alnum:]])/
+  PASSWORD_REQUIREMENTS=/(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[[:^alnum:]])/
   validates :password, format: PASSWORD_REQUIREMENTS
   validates :username, presence: true, uniqueness: true, length: { in: 6..20 }
 end
