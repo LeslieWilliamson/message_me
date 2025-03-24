@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:success] = "#{user.username} has successfully logged in"
       redirect_to root_path
     else
-      flash.now[:error] = "Invalid user name or password"
+      flash[:error] = "Invalid user name or password"
       render :new, status: :unprocessable_entity
     end
   end
