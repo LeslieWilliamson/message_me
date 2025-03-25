@@ -2,9 +2,9 @@
 
 user1:
   username: Frodo
-  password_digest: <%= BCrypt::Password.create('password') %>
+  password_digest: <%= BCrypt::Password.create('!PassW0rd!') %>
 
 user2:
   username: Samwise
-  password_digest: <%= BCrypt::Password.create('password') %>
+  password_digest: <%= BCrypt::Password.create('!PassW0rd!') %>
   
