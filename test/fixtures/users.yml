@@ -8,3 +8,10 @@ user2:
   username: Samwise
   password_digest: <%= BCrypt::Password.create('!PassW0rd!') %>
   
+user3:
+  username: Merry
+  password_digest: <%= BCrypt::Password.create('!PassW0rd!') %>
+
+user4:
+  username: Pippin
+  password_digest: <%= BCrypt::Password.create('!PassW0rd!') %>
