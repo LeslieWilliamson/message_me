@@ -46,5 +46,4 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_equal root_path, path
   end
-
 end
